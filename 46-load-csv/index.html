@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Example</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+  </head>
+  <body>
+<!--  
+    <script>
+      d3.csv("data.csv", function (error,data){
+        if (error) throw error;
+        data.forEach(function(d){
+          console.log(d.x +',' +d.y);
+        });
+        
+      });
+    </script> -->
+
+    <script>
+      d3.csv("data.csv",type, function (error,data){
+        if (error) throw error;
+        data.forEach(function(d){
+          console.log(d.x +',' +d.y);
+          console.log('x+y=',d.x + d.y);
+        });
+        
+      });
+
+      function type(d){
+        d.x = +d.x; // same as parseFloat(d.x);
+        d.y = +d.y; // same as parseFloat(d.y);
+        return d;
+      }
+    </script>
+
+  </body>
+</html>

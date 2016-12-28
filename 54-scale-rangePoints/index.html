@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Example</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+  </head>
+  <body>
+
+    <script>
+      var scale =d3.scale.ordinal()
+                    .domain(['a','b','c','d'])
+                    .rangePoints([0,100]); // 另外可測試rangeRoundPoints效果
+      
+      console.log(scale('a')); // print 0
+      console.log(scale('b')); // print 33.33333
+      console.log(scale('c')); // print 66.66666
+      console.log(scale('d')); // print 100
+
+    </script>
+
+  </body>
+</html>
